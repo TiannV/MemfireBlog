@@ -36,13 +36,12 @@ jobs:
           gitbook build
           mv _book caq253c8c94mh0l9e4m0
 
-      - name: Deploy
-        uses: reggionick/s3-deploy@v3
+    # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
+      - name: setup aliyun oss
+        uses: manyuanrong/setup-ossutil@master
         with:
-          folder: caq253c8c94mh0l9e4m0
-          bucket: ${{ secrets.S3_BUCKET }}
-          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-          invalidation: /
-          delete-removed: true
-          no-cache: true
-          private: true
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          access-key-id: ${{ secrets.OSS_KEY_ID }}
+          access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+      - name: cp files to aliyun
+        run: ossutil cp -rf .caq253c8c94mh0l9e4m0 oss://memfire-base-hosting/
