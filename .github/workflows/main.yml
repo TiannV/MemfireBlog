@@ -32,12 +32,12 @@ jobs:
           npm i -g gitbook-cli
           cd /home/runner/work/MemfireBlog/MemfireBlog
           gitbook build
-          tar -czvf blog.tar.gz _book
+          mv _book caq253c8c94mh0l9e4m0
 
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
-          folder: _book
+          folder: caq253c8c94mh0l9e4m0
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: ${{ secrets.S3_BUCKET_REGION }}
           invalidation: /
