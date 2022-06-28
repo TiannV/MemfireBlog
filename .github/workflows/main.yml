@@ -38,7 +38,7 @@ jobs:
 
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
       - name: setup aliyun oss
-      - uses: yizhoumo/setup-ossutil@v1
+        uses: yizhoumo/setup-ossutil@v1
         with:
           ossutil-version: '1.7.0' # Optional, default to '1.7.0'
           endpoint: oss-cn-shanghai.aliyuncs.com
