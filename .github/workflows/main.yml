@@ -44,4 +44,6 @@ jobs:
           endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.OSS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-      - run: ossutil cp -rf cau1a3s06ao4pe569hsg oss://memfire-base-hosting
+      - run: |
+          ossutil rm -rf cau1a3s06ao4pe569hsg oss://memfire-base-hosting/cau1a3s06ao4pe569hsg
+          ossutil cp -rf cau1a3s06ao4pe569hsg oss://memfire-base-hosting/cau1a3s06ao4pe569hsg
