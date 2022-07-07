@@ -29,8 +29,8 @@
     ],
     "pluginsConfig": {
         "valine": {
-            "appUrl":"https://cb18lls06aoc7um4j87g.baseapi.test2.langnal.com",
-            "appKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImV4cCI6MzE5NDgzNjc1MywiaWF0IjoxNjU2OTE2NzUzLCJpc3MiOiJzdXBhYmFzZSJ9.-ijpOfI0a5P6kFJUyMj0dKepYDYO6SWa3XtsID5FDvA"
+            "appUrl":"https://c9jr4ha5g6ha6egj2rqg.baseapi.memfiredb.com",
+            "appKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImV4cCI6MzE4ODg4MzAzMCwiaWF0IjoxNjUwOTYzMDMwLCJpc3MiOiJzdXBhYmFzZSJ9.m745kj4Pfkvb8bgL8fYPLFDkT1UFnJLD9AJIm7wAGHg"
         },
         "hide-element": {
             "elements": [".gitbook-link"]
