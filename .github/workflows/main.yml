@@ -33,6 +33,7 @@ jobs:
       - run: |
           npm i -g gitbook-cli
           cd /home/runner/work/MemfireBlog/MemfireBlog
+          gitbook install
           gitbook build
           mv _book cb18lls06aoc7um4j87g
 
