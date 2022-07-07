@@ -34,7 +34,7 @@ jobs:
           npm i -g gitbook-cli
           cd /home/runner/work/MemfireBlog/MemfireBlog
           gitbook build
-          mv _book caq253c8c94mh0l9e4m0
+          mv _book cb18lls06aoc7um4j87g
 
     # 设置阿里云OSS的 id/secret，存储到 github 的 secrets 中
       - name: setup aliyun oss
@@ -44,4 +44,6 @@ jobs:
           endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.OSS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
-      - run: ossutil cp -f caq253c8c94mh0l9e4m0 oss://memfire-base-hosting
+      - run: |
+          ossutil rm -rf oss://memfire-base-hosting/cb18lls06aoc7um4j87g
+          ossutil cp -rf cb18lls06aoc7um4j87g oss://memfire-base-hosting/cb18lls06aoc7um4j87g
